@@ -47,7 +47,7 @@ function Set-ResourceDownload {
         }
 
         Write-Verbose -Message ($localized.DownloadingResource -f $Uri, $DestinationPath);
-        Invoke-WebClientDownload -DestinationPath $DestinationPath -Uri $Uri -BufferSize $BufferSize -Credential $FeedCredential;
+        Invoke-BitsTransferDownload -DestinationPath $DestinationPath -Uri $Uri -Credential $FeedCredential;
 
         if ($NoChecksum -eq $false) {
 
