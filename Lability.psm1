@@ -69,3 +69,4 @@ $labDefaults['CallStackLogging'] = (Get-LabHostDefault).EnableCallStackLogging -
 
 ## Ensure we load the required DISM module version
 Import-DismModule;
+Import-BitsTransferModule;
