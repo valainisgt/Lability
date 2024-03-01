@@ -14,9 +14,6 @@ function Invoke-BitsTransferDownload {
         [Parameter(Mandatory, ValueFromPipelineByPropertyName)]
         [System.String] $Uri,
 
-        [Parameter(ValueFromPipelineByPropertyName)]
-        [System.UInt32] $BufferSize = 64KB,
-
         [Parameter(ValueFromPipelineByPropertyName)] [AllowNull()]
         [System.Management.Automation.PSCredential]
         [System.Management.Automation.CredentialAttribute()]
