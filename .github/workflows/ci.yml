@@ -1,0 +1,20 @@
+name: Lability CI
+on: [push]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PSake
+        shell: powershell
+        run: Install-Module PSake -Scope CurrentUser -AllowClobber -Force
+      - name: Install VirtualEngine.Build
+        shell: powershell
+        run: Install-Module VirtualEngine.Build -Scope CurrentUser -AllowClobber -Force
+      - name: Build
+        shell: powershell
+        run: Invoke-PSake -buildFile .\Build.PSake.ps1 -TaskList 'Deploy'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Lability
+          path: Release
