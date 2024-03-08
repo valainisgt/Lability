@@ -34,7 +34,7 @@ function Invoke-BitsTransferDownload {
                 $transferParams.Credentials = $Credential
             }
 
-            Start-BitsTransfer @transferParams
+            Start-BitsTransfer @transferParams -Dynamic
 
             return (Get-Item -Path $path);
         }
