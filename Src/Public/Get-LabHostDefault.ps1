@@ -25,7 +25,7 @@ function Get-LabHostDefault {
         $env:LabilityDismPath = $hostDefaults.DismPath;
         $env:LabilityRepositoryUri = $hostDefaults.RepositoryUri;
         $env:LabilityParentVhdPath = $hostDefaults.ParentVhdPath;
-        # $env:LabilityBitsTransferPath = $hostDefaults.BitsTransferPath;
+        $env:LabilityBitsTransferPath = $hostDefaults.BitsTransferPath;
 
         return $hostDefaults;
 

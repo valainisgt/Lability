@@ -94,11 +94,11 @@ function Get-ConfigurationData {
                         [ref] $null = Add-Member -InputObject $configurationData -MemberType NoteProperty -Name 'DismPath' -Value $dismDllPath;
                     }
 
-                    # if ($configurationData.PSObject.Properties.Name -notcontains 'BitsTransferPath') {
-                    #     $bitsTransferDllName = 'Microsoft.BackgroundIntelligentTransfer.Management.Interop.dll';
-                    #     $bitsTransferDllPath = Join-Path -Path "$env:SystemRoot\System32\WindowsPowerShell\v1.0\Modules\BitsTransfer" -ChildPath $bitsTransferDllName -Resolve;
-                    #     [ref] $null = Add-Member -InputObject $configurationData -MemberType NoteProperty -Name 'BitsTransferPath' -Value $bitsTransferDllPath;
-                    # }
+                    if ($configurationData.PSObject.Properties.Name -notcontains 'BitsTransferPath') {
+                        $bitsTransferDllName = 'Microsoft.BackgroundIntelligentTransfer.Management.Interop.dll';
+                        $bitsTransferDllPath = Join-Path -Path "$env:SystemRoot\System32\WindowsPowerShell\v1.0\Modules\BitsTransfer" -ChildPath $bitsTransferDllName -Resolve;
+                        [ref] $null = Add-Member -InputObject $configurationData -MemberType NoteProperty -Name 'BitsTransferPath' -Value $bitsTransferDllPath;
+                    }
 
                     ## This property may not be present in the original machine configuration file
                     if ($configurationData.PSObject.Properties.Name -notcontains 'RepositoryUri') {
