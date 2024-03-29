@@ -26,8 +26,8 @@ function Test-LabHostConfiguration {
 
             if (($property.Name.EndsWith('Path')) -and (-not [System.String]::IsNullOrEmpty($property.Value))) {
 
-                ## DismPath is not a folder and should be ignored (#159)
-                if ($property.Name -ne 'DismPath') {
+                ## DismPath and BitsTransferPath is not a folder and should be ignored (#159)
+                if (($property.Name -ne 'DismPath') -and ($property.Name -ne 'BitsTransferPath')) {
 
                     Write-Verbose -Message ($localized.TestingPathExists -f $property.Value);
                     $resolvedPath = Resolve-PathEx -Path $property.Value;
