@@ -9,6 +9,6 @@
 	"ResourcePath": "%SYSTEMDRIVE%\\Lability\\Resources",
     "ResourceShareName": "Resources",
     "DisableLocalFileCaching": false,
-    "DisableSwitchEnvironmentName": false,
+    "DisableSwitchEnvironmentName": true,
     "DisableVhdEnvironmentName": false
 }
