@@ -34,7 +34,12 @@ function Invoke-BitsTransferDownload {
                 $transferParams.Credentials = $Credential
             }
 
-            Start-BitsTransfer @transferParams -Dynamic
+            $hasDynamicParameter = (Get-Command -Name Start-BitsTransfer -Module 'BitsTransfer').Parameters['Dynamic'] -ne $null
+            if ($hasDynamicParameter) {
+                $transferParams.Dynamic = $true
+            }
+
+            Start-BitsTransfer @transferParams
 
             return (Get-Item -Path $path);
         }
