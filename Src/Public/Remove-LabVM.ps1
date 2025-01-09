@@ -5,7 +5,7 @@ function Remove-LabVM {
     .DESCRIPTION
         The Remove-LabVM cmdlet removes a virtual machine and it's VHD(X) file.
 #>
-    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'High')]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
     param (
         ## Virtual machine name
         [Parameter(Mandatory, ValueFromPipeline)]

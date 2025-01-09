@@ -21,7 +21,7 @@ function Reset-Lab {
         was not created or the baseline snapshot does not exist, the lab VMs can be recreated with the
         Start-LabConfiguration -Force.
 #>
-    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'High')]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSShouldProcess','')]
     param (
         ## Lab DSC configuration data

@@ -21,7 +21,7 @@ function Remove-LabConfiguration {
         about_ConfigurationData
         Start-LabConfiguration
 #>
-    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'High')]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
     param (
         ## Lab DSC configuration data
         [Parameter(Mandatory, ValueFromPipeline)]

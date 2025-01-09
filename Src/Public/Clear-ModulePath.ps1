@@ -21,7 +21,7 @@ function Clear-ModulePath {
     .NOTES
         USE WITH CAUTION! Not sure thsi should even be in this module?
 #>
-    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'High')]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
     param (
         [Parameter(ValueFromPipelineByPropertyName)]
         [ValidateSet('AllUsers','CurrentUser')]

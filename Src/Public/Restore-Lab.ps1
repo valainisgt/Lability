@@ -25,7 +25,7 @@ function Restore-Lab {
         Checkpoint-Lab
         Reset-Lab
 #>
-    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'High')]
+    [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'Medium')]
     [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseDeclaredVarsMoreThanAssignments','nodes')]
     param (
         ## Lab DSC configuration data
