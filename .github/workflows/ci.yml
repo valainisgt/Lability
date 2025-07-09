@@ -15,7 +15,7 @@ jobs:
         run: Install-Module VirtualEngine.Build -Scope CurrentUser -AllowClobber -Force
       - name: Build
         shell: powershell
-        run: Invoke-PSake -buildFile .\Build.PSake.ps1 -TaskList 'Deploy'
+        run: Invoke-PSake -buildFile .\Build.PSake.ps1 -TaskList 'Stage'
       - uses: actions/upload-artifact@v4
         with:
           name: Lability
